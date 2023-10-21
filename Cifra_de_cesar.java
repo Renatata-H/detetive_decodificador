@@ -1,4 +1,4 @@
-public class cifra_de_cesar {
+public class Cifra_de_cesar {
 
     public static int 
     ordem_lexicografica(String palavra1, String palavra2) {
