@@ -21,4 +21,4 @@ Suponha a CHAVE = 15, o MODO = "descriptografa" e o TEXTO = "Qdb sxp! :)". Inser
 
 A saída deverá ser: 
 
-      TEXTO DESCRIPTOGRAFADO: Bom dia! :)
+      Bom dia! :)
