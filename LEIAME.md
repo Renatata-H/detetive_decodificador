@@ -12,7 +12,7 @@ Em seguida, para executar o programa, insira:
 
         java cifra_de_cesar CHAVE MODO TEXTO
 
-em que a CHAVE se refere a um número inteiro qualquer o qual ditará como o alfabeto será rotacionado; MODO se refere entre as opções "criptografa" e "descriptografa" (quaisquer outros textos escritos darão erro!); e TEXTO se refere ao texto o qual você deseja que programa trabalhe. Note que, para TEXTOs com mais de uma palavra, é necessário colocar aspas ("") ao redor dos mesmos.
+em que a CHAVE se refere a um número inteiro qualquer o qual ditará como o alfabeto será rotacionado; MODO se refere entre as opções "criptografa" e "descriptografa" (quaisquer outros textos escritos darão erro!); e TEXTO se refere ao texto o qual você deseja que programa trabalhe. Note que, para TEXTOs com mais de uma palavra, é necessário colocar aspas ("") ao redor dos mesmos. Além disso, *não utilize caracteres especiais**, como os acentuados, em seu TEXTO.
 
 #### Exemplo: 
 Suponha a CHAVE = 15, o MODO = "descriptografa" e o TEXTO = "Qdb sxp! :)". Inseriremos na linha de comando então:
