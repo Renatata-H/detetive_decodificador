@@ -109,7 +109,7 @@ public class cifra_de_cesar {
 
                 i = i + 1;
             }
-            System.out.println("TEXTO CRIPTOGRAFADO: "+novo_texto);
+            System.out.println(novo_texto);
         } 
         // Descriptografa
         else if (ordem_lexicografica(args[1],"descriptografa") == 0) {
@@ -136,13 +136,13 @@ public class cifra_de_cesar {
                 }
                 i = i + 1;
             }
-            System.out.println("TEXTO DESCRIPTOGRAFADO: "+novo_texto);
+            System.out.println(novo_texto);
             
         
         } 
         // Inválido 
-        else {
-            System.out.println("Modo de execução inválido!");
-        }
+        //else {
+        //    System.out.println("Modo de execução inválido!");
+        //}
     }
 }
