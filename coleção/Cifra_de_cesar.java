@@ -64,7 +64,7 @@ public class Cifra_de_cesar {
     }
 
     public static String 
-    criptografa(int chave, String texto, int tamanho_texto, String[] alfabeto, String[] ALFABETO) {
+    criptografa(int chave, String texto, int tamanho_texto) {
 
         int i = 0, letra, posição_alfabeto;
         String novo_texto = "";
@@ -74,21 +74,21 @@ public class Cifra_de_cesar {
 
             if (letra >= 65 && letra <= 90) {
                 // Letra maiúscula;
-                posição_alfabeto = busca_binaria(ALFABETO, ""+texto.charAt(i));
+                posição_alfabeto = texto.charAt(i) - 65;
                 posição_alfabeto = (posição_alfabeto + chave)%26;
                 if (posição_alfabeto < 0) {
                    posição_alfabeto = posição_alfabeto + 26;
                 }
-                novo_texto = novo_texto + ALFABETO[posição_alfabeto];
+                novo_texto = novo_texto + (char)(posição_alfabeto+65);
 
             } else if (letra >= 97 && letra <= 122) {
                 // Letra minúscula;
-                posição_alfabeto = busca_binaria(alfabeto, ""+texto.charAt(i));
+                posição_alfabeto = texto.charAt(i) - 97;
                 posição_alfabeto = (posição_alfabeto + chave)%26;
                 if (posição_alfabeto < 0) {
                     posição_alfabeto = posição_alfabeto + 26;
                 }
-                novo_texto = novo_texto + alfabeto[posição_alfabeto];
+                novo_texto = novo_texto + (char)(posição_alfabeto+97);
             } else {
                 novo_texto = novo_texto + texto.charAt(i);
             }
@@ -98,7 +98,7 @@ public class Cifra_de_cesar {
     } 
 
     public static String 
-    descriptografa(int chave, String texto, int tamanho_texto, String[] alfabeto, String[] ALFABETO) {
+    descriptografa(int chave, String texto, int tamanho_texto) {
 
         int i = 0, letra, posição_alfabeto;
         String novo_texto = "";
@@ -108,21 +108,21 @@ public class Cifra_de_cesar {
 
             if (letra >= 65 && letra <= 90) {
                 // Letra maiúscula;
-                posição_alfabeto = busca_binaria(ALFABETO, ""+texto.charAt(i));
+                posição_alfabeto = texto.charAt(i) - 65;
                 posição_alfabeto = (posição_alfabeto-chave)%26;
                 if (posição_alfabeto < 0) {
                    posição_alfabeto = posição_alfabeto + 26;
                 }
-                novo_texto = novo_texto + ALFABETO[posição_alfabeto];
+                novo_texto = novo_texto + (char)(posição_alfabeto+65);
 
             } else if (letra >= 97 && letra <= 122) {
                 // Letra minúscula;
-                posição_alfabeto = busca_binaria(alfabeto, ""+texto.charAt(i));
+                posição_alfabeto = texto.charAt(i) - 97;
                 posição_alfabeto = (posição_alfabeto-chave)%26;
                 if (posição_alfabeto < 0) {
                    posição_alfabeto = posição_alfabeto + 26;
                 }
-                novo_texto = novo_texto + alfabeto[posição_alfabeto];
+                novo_texto = novo_texto + (char)(posição_alfabeto+97);
             } else {
                 novo_texto = novo_texto + texto.charAt(i);
             }
@@ -142,22 +142,19 @@ public class Cifra_de_cesar {
         String texto = args[2];
         int tamanho_texto = texto.length();
         String novo_texto = "";
-        
-        String[] alfabeto = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
-        String[] ALFABETO = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
 
         String modo = args[1];
         System.out.println(modo);
 
         // Criptografa
         if (ordem_lexicografica(args[1],"criptografa") == 0) {
-            novo_texto = criptografa(chave, texto, tamanho_texto, alfabeto, ALFABETO);
+            novo_texto = criptografa(chave, texto, tamanho_texto);
             System.out.println(novo_texto);
         
         }
         // Descriptografa
         else if (ordem_lexicografica(args[1],"descriptografa") == 0) {
-            novo_texto = descriptografa(chave, texto, tamanho_texto, alfabeto, ALFABETO);
+            novo_texto = descriptografa(chave, texto, tamanho_texto);
             System.out.println(novo_texto);
         } 
         // Inválido 
