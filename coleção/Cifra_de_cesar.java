@@ -35,34 +35,6 @@ public class Cifra_de_cesar {
        return tamanho_palavra1-tamanho_palavra2;
     }
 
-    public static int 
-    busca_binaria(String[] lista, String elemento) {
-        /* Dado uma lista de N elementos organizados em ordem não-
-         * decrescente e um elemento, verifica onde está esse elemento na lista.
-         */
-        
-        int maximo, meio, minimo;
-        maximo = lista.length - 1;
-        minimo = 0;
-
-        while (maximo >= minimo) {
-            meio = (maximo+minimo)/2;
-
-            if (ordem_lexicografica(lista[meio], elemento) > 0) {
-                //System.out.println(lista[meio]+" é maior que "+elemento);
-                maximo = meio - 1;
-
-            } else if (ordem_lexicografica(lista[meio], elemento) < 0) {
-                //System.out.println(lista[meio]+" é menor que "+elemento);
-                minimo = meio + 1;
-
-            } else {
-                return meio;
-            }
-        }
-        return -1;
-    }
-
     public static String 
     criptografa(int chave, String texto, int tamanho_texto) {
 
