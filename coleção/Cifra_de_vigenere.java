@@ -12,10 +12,6 @@ public class Cifra_de_vigenere {
          String texto = args[2];
          int i = 0, tamanho_texto = texto.length(), chave_i;
          String novo_texto = "";
- 
-         String[] alfabeto = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
-         String[] ALFABETO = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
-
          String modo = args[1];
 
          if (chave.length() == tamanho_texto) {
@@ -32,7 +28,7 @@ public class Cifra_de_vigenere {
                         chave_i = chave_i - 97;
                     }
 
-                    novo_texto = novo_texto + Cifra_de_cesar.criptografa(chave_i, letra, 1, alfabeto, ALFABETO);  //Cifra_de_cesar.main(argumentos)
+                    novo_texto = novo_texto + Cifra_de_cesar.criptografa(chave_i, letra, 1);  //Cifra_de_cesar.main(argumentos)
                     
                     i = i + 1;
                 }
@@ -51,7 +47,7 @@ public class Cifra_de_vigenere {
                         chave_i = chave_i - 97;
                     }
 
-                    novo_texto = novo_texto + Cifra_de_cesar.descriptografa(chave_i, letra, 1, alfabeto, ALFABETO);  //Cifra_de_cesar.main(argumentos)
+                    novo_texto = novo_texto + Cifra_de_cesar.descriptografa(chave_i, letra, 1);  //Cifra_de_cesar.main(argumentos)
                     
                     i = i + 1;
                 }
