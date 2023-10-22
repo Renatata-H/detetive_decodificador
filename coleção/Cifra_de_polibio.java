@@ -107,15 +107,20 @@ public class Cifra_de_polibio {
         String seis_simbolos = args[0];
         String modo = args[1];
 
-        String codigo; 
-        if (modo.equals("criptografa")) {
-            codigo = criptografa(texto, alfabeto, seis_simbolos);
-            System.out.println(codigo);
-        } else if (modo.equals("descriptografa")) {
-            codigo = descriptografa(texto, alfabeto, seis_simbolos);
-            System.out.println(codigo);
+        if (seis_simbolos.length() > 6) {
+            System.out.println("Erro! Tamanho de chave inválida!");
         } else {
-            System.out.println("Erro! Modo de execução inválido.");
+
+            String codigo; 
+            if (modo.equals("criptografa")) {
+                codigo = criptografa(texto, alfabeto, seis_simbolos);
+                System.out.println(codigo);
+            } else if (modo.equals("descriptografa")) {
+                codigo = descriptografa(texto, alfabeto, seis_simbolos);
+                System.out.println(codigo);
+            } else {
+                System.out.println("Erro! Modo de execução inválido.");
+            }
         }
     }
 }
