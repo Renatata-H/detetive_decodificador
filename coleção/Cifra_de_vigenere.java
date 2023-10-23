@@ -1,3 +1,4 @@
+// AVISO: Esse código precisa que haja, no mesmo diretório, o Cifra_de_cesar.class!!
 
 public class Cifra_de_vigenere {
     
