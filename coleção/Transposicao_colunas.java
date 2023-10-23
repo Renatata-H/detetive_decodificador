@@ -9,7 +9,7 @@ public class Transposicao_colunas {
         int tamanho_chaves = chave.length();
         int i = 0, j, k = 0;
         int[] numeracao = new int[tamanho_chaves];
-        while (i < 26) {
+        while (i < 52) {
             
             if (i < 26) {
                 letra = (char) (i + 97);
