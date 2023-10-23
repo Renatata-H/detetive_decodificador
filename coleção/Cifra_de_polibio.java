@@ -107,7 +107,7 @@ public class Cifra_de_polibio {
         String seis_simbolos = args[0];
         String modo = args[1];
 
-        if (seis_simbolos.length() > 6) {
+        if (seis_simbolos.length() != 6) {
             System.out.println("Erro! Tamanho de chave inválida!");
         } else {
 
