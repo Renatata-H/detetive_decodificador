@@ -1,4 +1,5 @@
 public class Transposicao_colunas {
+    // Não finalizado >:(
 
     public static String
     criptografa(String texto, String chave) {
@@ -37,7 +38,6 @@ public class Transposicao_colunas {
         int quantidade_linhas = (int) Math.ceil(temp/tamanho_chaves);    
         int l; k = 0;
         while (!achou_todos) {
-            //System.out.println("a");
             i = 0;
             while (i < tamanho_chaves) {
                 if (numeracao[i] == k) {
@@ -51,7 +51,6 @@ public class Transposicao_colunas {
                     }
                     k = k + 1;
                     if (k == tamanho_chaves) {
-                        System.out.println("b");
                         achou_todos = true;
                         i = tamanho_chaves;
                     } 
